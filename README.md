@@ -68,6 +68,20 @@ Current security approaches are fundamentally broken:
 
 ---
 
+### GuardBot Bounty Architecture
+
+GuardBot is an autonomous AI security agent that operates with its own wallet, paying for services and earning bounties without human intervention.
+
+![GuardBot Bounty Architecture](assets/Bounty_arch.png)
+
+**Key Components:**
+- **Privy Embedded Wallet**: Agent has its own wallet for autonomous transactions
+- **x402 Micropayments**: Pays 0.001 MOVE per AI scan, 0.01 MOVE per report
+- **BountyVault Integration**: Claims rewards directly from protocol vaults
+- **Self-Sustaining Economics**: Spends ~0.011 MOVE per bug, earns 1-5 MOVE in bounties
+
+---
+
 ## Product Market Fit
 
 ### The Market Opportunity
@@ -199,18 +213,6 @@ Module: 0x75af640152814da05efaa231640b06d253780551d584a9e81cbd6c3f7b1081ef
 6. Protocol operations blocked until admin unpause
 ```
 
-### GuardBot Bounty Architecture
-
-GuardBot is an autonomous AI security agent that operates with its own wallet, paying for services and earning bounties without human intervention.
-
-![GuardBot Bounty Architecture](assets/Bounty_arch.png)
-
-**Key Components:**
-- **Privy Embedded Wallet**: Agent has its own wallet for autonomous transactions
-- **x402 Micropayments**: Pays 0.001 MOVE per AI scan, 0.01 MOVE per report
-- **BountyVault Integration**: Claims rewards directly from protocol vaults
-- **Self-Sustaining Economics**: Spends ~0.011 MOVE per bug, earns 1-5 MOVE in bounties
-
 ---
 
 ## Tech Stack
@@ -285,9 +287,30 @@ pnpm start
 
 ---
 
-## Demo Flow
+## Using The Application
 
-### GuardBot Demo (3 minutes)
+### Dashboard (Subscription-Based Protection)
+
+**For Protocol Teams** - Continuous monitoring with payment streams
+
+1. **Register Protocol**: Click "Register Protocol" → Enter contract name and address
+2. **Create Payment Stream**: Click "Activate Stream" → Deposit initial MOVE (min 0.1 MOVE)
+3. **Run Threat Analysis**:
+   - Click "Analyze Threats" on your protocol card
+   - Select attack type (Flash Loan, Oracle, Sandwich, Reentrancy)
+   - Pay 0.001 MOVE via x402 micropayment
+   - View AI-powered threat assessment (0-100% threat level)
+4. **Monitor Status**: Dashboard shows real-time threat levels and protection status
+5. **Auto-Pause**: If threat level ≥75%, protocol is automatically paused on-chain
+6. **Emergency Pause**: Manually pause anytime via "Emergency Pause" button
+7. **Add Funds**: Click "Add Funds" to top up your payment stream
+8. **Unpause**: After reviewing threat, click "Unpause" to resume operations
+
+**Bounty Protection Alternative**: Click "Register for Bounty Protection" to use the bounty model instead (deposit funds to vault, researchers earn bounties for finding bugs)
+
+### GuardBot (Autonomous Agent)
+
+**For Automated Security** - AI agent that pays, scans, and earns autonomously
 
 1. **Initialize**: Click "Run Demo" → GuardBot wallet created via Privy
 2. **Pay for Analysis**: GuardBot pays 0.001 MOVE for AI scan (visible on-chain)
@@ -296,12 +319,14 @@ pnpm start
 5. **Claim Bounty**: GuardBot claims 1+ MOVE from vault
 6. **Result**: Agent spent 0.011 MOVE, earned 1+ MOVE = profitable
 
-### Researcher Demo
+### Researcher Portal
+
+**For Security Researchers** - Submit vulnerabilities and earn bounties
 
 1. **Browse Protocols**: See bounty-protected protocols and vault balances
 2. **Submit Report**: Fill vulnerability details, pay 0.01 MOVE fee
 3. **Track Status**: Watch report go from Pending → Validated
-4. **Claim Bounty**: Instant payout based on severity tier
+4. **Claim Bounty**: Instant payout based on severity tier (0.1 - 5 MOVE)
 
 ---
 
