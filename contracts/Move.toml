@@ -1,0 +1,12 @@
+[package]
+name = "MoveGuard"
+version = "1.0.0"
+authors = ["MoveGuard Team"]
+
+[addresses]
+moveguard = "0x75af640152814da05efaa231640b06d253780551d584a9e81cbd6c3f7b1081ef"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/movementlabsxyz/aptos-core.git", rev = "elsa", subdir = "aptos-move/framework/aptos-framework" }
+AptosStdlib = { git = "https://github.com/movementlabsxyz/aptos-core.git", rev = "elsa", subdir = "aptos-move/framework/aptos-stdlib" }
+MoveStdlib = { git = "https://github.com/movementlabsxyz/aptos-core.git", rev = "elsa", subdir = "aptos-move/framework/move-stdlib" }
