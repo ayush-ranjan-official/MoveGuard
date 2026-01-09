@@ -27,6 +27,9 @@ Current security approaches are fundamentally broken:
 
 **MoveGuard is an autonomous AI security agent that monitors DeFi protocols 24/7, detects threats in real-time, and can pause contracts before exploits happen.**
 
+
+- **Deployed Contract**: [`0x75af640152814da05efaa231640b06d253780551d584a9e81cbd6c3f7b1081ef`](https://explorer.movementnetwork.xyz/account/0x75af640152814da05efaa231640b06d253780551d584a9e81cbd6c3f7b1081ef?network=bardock+testnet)
+
 ### How It Works
 
 ![How It Works](assets/how_it_works.png)
